@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Image, ScrollView, TextInput } from "react-native";
+import Inputdata from "./src/Inputdata";
 export default function App() {
   return (
-    <ScrollView>
     <View className="flex-1  items-center justify-top  bg-white">
-      <View className="bg-indigo-800 mt-7 w-full h-12  items-left px-5 justify-center">
+      <View className="bg-indigo-800 mt-7 w-full h-12  items-left px-5 justify-center top-0">
         <View className="items-start">
           <Text className="text-2xl text-white ">
             <Image
@@ -22,43 +22,24 @@ export default function App() {
           <View className="w-7 h-1 rounded-full mt-1 bg-white"></View>
         </View>
       </View>
-      <View className="rounded-b-2xl shadow-md">
-      <Image
-              source={{
-                uri: "https://images.pexels.com/photos/14392063/pexels-photo-14392063.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-              }}
-              style={{ width: 500, height: 250  }}
-            />
-      </View>
-      <View className="rounded-b-2xl shadow-md mt-5">
-      <Image
-              source={{
-                uri: "https://images.pexels.com/photos/14392062/pexels-photo-14392062.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-              }}
-              style={{ width: 500, height: 250  }}
-            />
-      </View>
-      <View className="rounded-b-2xl shadow-md mt-5">
-      <Image
-              source={{
-                uri: "https://images.pexels.com/photos/14392062/pexels-photo-14392062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-              }}
-              style={{ width: 500, height: 250  }}
-            />
-      </View>
-      <View className="rounded-b-2xl shadow-md mt-5">
-      <Image
-              source={{
-                uri: "https://images.pexels.com/photos/14392046/pexels-photo-14392046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-              }}
-              style={{ width: 500, height: 250  }}
-            />
-      </View>
-      <View className="bg-indigo-800 mt-7 w-full h-12  items-left px-5 justify-center">
-        <Text className="text-2xl text-white">Footer</Text>
+      <ScrollView>
+        <View className="rounded-b-2xl shadow-md">
+          <Image
+            source={{
+              uri: "https://images.pexels.com/photos/14392063/pexels-photo-14392063.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            }}
+            style={{ width: 500, height: 250 }}
+          />
         </View>
+        {/* Text input Text area */}
+        <View className="bg-white h-9  border">
+          <TextInput defaultValue="You can type in me" />
+        </View>
+        <Inputdata />
+      </ScrollView>
+      <View className="bg-indigo-800  w-full h-12  items-left px-5 justify-center">
+        <Text className="text-2xl text-white">Footer</Text>
+      </View>
     </View>
-    
-    </ScrollView>
   );
 }
